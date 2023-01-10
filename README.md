@@ -1,2 +1,2 @@
 # hughesperreault.com
-Code for my personnal website
+Code for my personal website hughesperreault.com
