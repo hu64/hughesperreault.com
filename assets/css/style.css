@@ -33,3 +33,7 @@
 .paper {
   margin-top: 10px;
 }
+
+.profile-img {
+  max-width: 350px;
+}
