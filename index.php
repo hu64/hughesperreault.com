@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
 <head>
     <title>Hughes Perreault</title>
     <meta name="description" content="This is the homepage of Hughes Perreault">
