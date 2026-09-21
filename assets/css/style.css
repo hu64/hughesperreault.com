@@ -1,5 +1,6 @@
-.text-justify {
-  text-align: justify;
+/* Keep the obfuscated email from breaking mid-phrase. */
+.contact-email {
+  white-space: nowrap;
 }
 
 .company {
@@ -8,6 +9,20 @@
 
 .duration {
   color: #97aac3;
+}
+
+/* Job title and duration sit side by side when there is room, and stack
+   on narrow screens instead of the duration floating into the title. */
+.job-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0 1rem;
+}
+
+.job-header .duration {
+  font-size: 0.9rem;
 }
 
 .publication-title {
@@ -36,9 +51,86 @@
 
 .profile-img {
   max-width: 350px;
+  width: 100%;
 }
 
 .icon {
   max-width: 40px;
   margin-bottom: 10px;
+}
+
+/* Links in publication lists are tap targets, not just text. */
+.paper a {
+  display: inline-block;
+  padding: 2px 0;
+}
+
+/* Social icons need finger-sized hit areas. */
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+@media (max-width: 991.98px) {
+  /* The card spans the full width on mobile, so square off the outer
+     corners and let the content breathe instead of the frame. */
+  .page-card {
+    border-radius: 0;
+  }
+
+  /* A 350px circle crowds a 375px screen; scale it to the column. */
+  .profile-img {
+    max-width: 200px;
+  }
+
+  /* Stacked: the duration reads as a caption under the title. */
+  .job-header {
+    flex-direction: column;
+  }
+
+  .job-header .duration {
+    font-size: 0.85rem;
+  }
+
+  /* Ordered publication lists indent twice over (ol + nested ul),
+     which eats scarce horizontal space. */
+  .paper {
+    margin-top: 16px;
+  }
+
+  ol {
+    padding-left: 1.25rem;
+  }
+
+  .paper ul {
+    padding-left: 1rem;
+    margin-bottom: 0;
+  }
+
+  /* Long author lists and conference names should wrap, never overflow. */
+  .publication-authors,
+  .publication-conference {
+    overflow-wrap: break-word;
+  }
+}
+
+@media (max-width: 575.98px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+  }
+
+  h3 {
+    font-size: 1.15rem;
+  }
+
+  h5 {
+    font-size: 1.05rem;
+  }
 }
