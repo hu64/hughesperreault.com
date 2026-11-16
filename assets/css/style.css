@@ -72,6 +72,8 @@
   justify-content: center;
   min-width: 44px;
   min-height: 44px;
+  /* Icons are not text: Bootstrap's link underline only draws stray dashes. */
+  text-decoration: none;
 }
 
 @media (max-width: 991.98px) {
