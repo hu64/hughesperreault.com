@@ -2,9 +2,13 @@
 <html lang="en">
 
 <head>
+    <meta charset="utf-8">
     <title>Hughes Perreault</title>
     <meta name="description" content="Hughes Perreault — AI researcher at the Institut de recherche d'Hydro-Québec (IREQ), with a background in computer vision, object detection, and multimodal image fusion.">
     <link rel="canonical" href="https://www.hughesperreault.com/" />
+    <link rel="alternate" hreflang="en" href="https://www.hughesperreault.com/" />
+    <link rel="alternate" hreflang="fr" href="https://www.hughesperreault.com/fr/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.hughesperreault.com/" />
     <meta name="author" content="Hughes Perreault">
     <meta name="robots" content="index, follow">
     <meta property="og:type" content="website">
@@ -21,7 +25,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link href="assets/css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.6/css/academicons.min.css" integrity="sha384-IAnhEDrYZnLsYcVzowpizdxXTHFovW5/CkZObGfY2QuaCKaQpvLCjj45LGb4Q/yE" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" integrity="sha384-CK2SzKma4jA5H/MXDUU7i1TqZlCFaD4T01vtyDFvPlD97JQyS+IsSh1nI2EFbpyk" crossorigin="anonymous">
     <script type="application/ld+json">
     {
@@ -74,8 +78,7 @@
 
                         <div>
                             <h3>Contacts</h3>
-                            <span class="contact-email">hughes dot perreault</span> <span class="contact-email">at polymtl.ca</span> <br>
-                        
+                            Best reached via <a href="https://linkedin.com/in/hughes-perreault" target="_blank" rel="me noopener">LinkedIn</a>.
                             <div class="social-links d-flex flex-wrap justify-content-center justify-content-lg-start align-items-center gap-2 mt-2">
                                 <a href="https://orcid.org/0000-0001-8612-3180" target="_blank" rel="me noopener" aria-label="ORCID">
                                     <i class="ai ai-orcid ai-2x"></i>
@@ -98,7 +101,7 @@
                                 <a href="https://github.com/hu64" target="_blank" aria-label="GitHub">
                                     <i class="bi bi-github fs-3"></i>
                                 </a>
-                                <a href="https://linkedin.com/in/hughes-perreault" target="_blank" aria-label="LinkedIn">
+                                <a href="https://linkedin.com/in/hughes-perreault" target="_blank" rel="me noopener" aria-label="LinkedIn">
                                     <i class="bi bi-linkedin fs-3"></i>
                                 </a>
                             </div>
@@ -123,15 +126,6 @@
                         </div>
 
                         <div class="mt-4 mt-lg-5">
-                            <h3>Languages</h3>
-
-                            French (Native)
-                            <br>
-                            English (Professional)
-
-                        </div>
-
-                        <div class="mt-4 mt-lg-5">
                             <h3 class="mb-3">Interests</h3>
                             <img class="icon" src="assets/images/chess-svgrepo-com.svg" alt="Chess" loading="lazy" style="height:2em; vertical-align:middle;" />
                             <img class="icon" src="assets/images/family.png" alt="Family" loading="lazy" />
@@ -144,12 +138,16 @@
                             <div class="small">
                                 The code for this site can be found <a
                                     href="https://github.com/hu64/hughesperreault.com" target="_blank">here</a>.
+                                <br>Last updated: November 2026.
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-8 mb-4">
+                    <div class="lang-switch text-end small mb-2">
+                        <a href="fr/" hreflang="fr" lang="fr">Français</a>
+                    </div>
                     <h1>Hughes Perreault - AI researcher</h1>
 
                     <!-- About section -->
@@ -160,15 +158,14 @@
                         About
                     </h2>
                     <p>
-                        Hi! I'm Hughes, an AI researcher at the Institut de recherche d'Hydro-Québec (IREQ), where I
-                        apply machine learning to problems in the energy sector. Before that, I was Principal AI
-                        Developer at Haylem and an AI Scientist at Thales, where I worked on computer vision at the
-                        edge, including multimodal image fusion, thermal and visible image registration, and lightweight
-                        target detection. During my Ph.D. at Polytechnique Montréal, I focused on object detection and
-                        scene understanding for transportation, and achieved noteworthy results on a variety of road
-                        user datasets, such as Cityscapes, KITTI, India Driving, UA-DETRAC, and UAVDT. I have extensive
-                        experience with deep learning tools such as TensorFlow and PyTorch, as well as classic computer
-                        vision.
+                        I am an AI researcher at the Institut de recherche d'Hydro-Québec (IREQ), where I work on
+                        machine learning for the energy sector. My research centers on computer vision and efficient
+                        deep learning: detecting, segmenting and tracking objects in images and videos, and fusing
+                        information from multiple sensors. Before joining IREQ, I was Principal AI Developer at Haylem
+                        and an AI Scientist at Thales, where I developed multimodal image fusion, thermal and visible
+                        image registration, and lightweight target detection for edge devices. I received my Ph.D. in
+                        computer engineering from Polytechnique Montréal in 2021, with a thesis on the detection and
+                        segmentation of road users in images and videos.
 
                         <br><br>
                         Fun fact, my Dijkstra number is five <a
@@ -178,12 +175,43 @@
                             here)</a>.
                     </p>
 
+                    <!-- Research interests section -->
+                    <h2 class="mt-4 mt-lg-5">
+                        <span>
+                            <i class="bi bi-lightbulb-fill fs-4 align-middle"></i>
+                        </span>
+                        Research Interests
+                    </h2>
+                    <ul class="research-interests">
+                        <li>Computer vision: object detection, instance segmentation and tracking</li>
+                        <li>Multimodal image fusion and registration (thermal and visible)</li>
+                        <li>Efficient deep learning for edge devices</li>
+                        <li>Machine learning for the energy sector</li>
+                    </ul>
+
+                    <!-- News section -->
+                    <h2 class="mt-4 mt-lg-5">
+                        <span>
+                            <i class="bi bi-megaphone-fill fs-4 align-middle"></i>
+                        </span>
+                        News
+                    </h2>
+                    <ul class="news list-unstyled">
+                        <li><span class="news-date">Jan 2026</span> <span>Joined the Institut de recherche d'Hydro-Québec
+                            (IREQ) as an AI Researcher.</span></li>
+                        <li><span class="news-date">Mar 2025</span> <span>Joined Haylem as Principal AI Developer.</span></li>
+                        <li><span class="news-date">Aug 2023</span> <span>Our paper on lightweight target detection was
+                            presented at GVSETS 2023 (<a href="https://arxiv.org/abs/2611.09756" target="_blank">arXiv</a>).</span></li>
+                        <li><span class="news-date">Jun 2023</span> <span>MobileFuse published at FUSION 2023.</span></li>
+                        <li><span class="news-date">Oct 2021</span> <span>Joined Thales as an AI Scientist.</span></li>
+                    </ul>
+
                     <h2 class="mt-4 mt-lg-5">
 
                         <span>
                             <i class="bi bi-briefcase-fill fs-4 align-middle"></i>
                         </span>
-                        Experiences
+                        Positions
                     </h2>
                     <div class="mt-3 job-header">
                         <div class="job-title">AI Researcher</div>
@@ -199,48 +227,101 @@
 
                     <div class="mt-3 job-header">
                         <div class="job-title">AI Scientist</div>
-                        <div class="duration">October 2021 - Feb. 2025</div>
+                        <div class="duration">October 2021 - February 2025</div>
                     </div>
                     <div class="company"> Thales Group </div>
 
-                    <div class="mt-3 job-header">
-                        <div class="job-title">Lecturer for the INF1005C course</div>
-                        <div class="duration">Trimester F19</div>
-                    </div>
-                    <div class="company"> Polytechnique Montréal </div>
 
-                    <div class="mt-3 job-header">
-                        <div class="job-title">TA for the INF8770 course</div>
-                        <div class="duration">Trimesters F17, W18, F18, W19, F20, W21</div>
+                    <!-- Selected publications section -->
+                    <h2 class="mt-4 mt-lg-5">
+                        <span>
+                            <i class="bi bi-star-fill fs-4 align-middle"></i>
+                        </span>
+                        Selected Publications
+                    </h2>
+                    <div class="selected-paper row g-3 align-items-center mt-1">
+                        <div class="col-4 col-sm-3">
+                            <img src="assets/images/papers/mobilefuse.webp" class="img-fluid rounded selected-thumb" alt="Architecture overview of MobileFuse, fusing infrared and visible images"
+                                width="400" height="279" loading="lazy" />
+                        </div>
+                        <div class="col-8 col-sm-9">
+                            <span class="badge venue-badge">FUSION 2023</span>
+                            <div class="publication-title">MobileFuse: Multimodal Image Fusion at the Edge</div>
+                            <div class="publication-authors"><strong>Hughes Perreault</strong>, Benoit Debaque, Rares David, Marc-Antoine Drouin, Nicolas Duclos-Hindie, Simon Roy</div>
+                            <div class="paper-links">
+                                <a href="assets/papers/mobilefuse.pdf" target="_blank">pdf</a> / <a href="https://doi.org/10.23919/FUSION52260.2023.10224104" target="_blank">doi</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="company"> Polytechnique Montréal
+                    <div class="selected-paper row g-3 align-items-center mt-1">
+                        <div class="col-4 col-sm-3">
+                            <img src="assets/images/papers/centerpoly.webp" class="img-fluid rounded selected-thumb" alt="CenterPoly instance segmentation of cars and pedestrians on a city street"
+                                width="400" height="201" loading="lazy" />
+                        </div>
+                        <div class="col-8 col-sm-9">
+                            <span class="badge venue-badge">ICCVW 2021</span>
+                            <div class="publication-title">CenterPoly: Real-time Instance Segmentation Using Bounding Polygons</div>
+                            <div class="publication-authors"><strong>Hughes Perreault</strong>, Guillaume-Alexandre Bilodeau, Nicolas Saunier, Maguelonne Héritier</div>
+                            <div class="paper-links">
+                                <a href="assets/papers/centerpoly.pdf" target="_blank">pdf</a> / <a href="https://arxiv.org/abs/2108.08923" target="_blank">arxiv</a> / <a href="https://doi.org/10.1109/ICCVW54120.2021.00333" target="_blank">doi</a> / <a href="https://github.com/hu64/CenterPoly" target="_blank">code</a>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="mt-3 job-header">
-                        <div class="job-title">Computer Vision Intern</div>
-                        <div class="duration">August 2016 - December 2016</div>
+                    <div class="selected-paper row g-3 align-items-center mt-1">
+                        <div class="col-4 col-sm-3">
+                            <img src="assets/images/papers/ffavod.webp" class="img-fluid rounded selected-thumb" alt="FFAVOD vehicle detections on a UA-DETRAC traffic scene"
+                                width="400" height="227" loading="lazy" />
+                        </div>
+                        <div class="col-8 col-sm-9">
+                            <span class="badge venue-badge">Pattern Recognit. Lett. 2021</span>
+                            <div class="publication-title">FFAVOD: Feature Fusion Architecture for Video Object Detection</div>
+                            <div class="publication-authors"><strong>Hughes Perreault</strong>, Guillaume-Alexandre Bilodeau, Nicolas Saunier, Maguelonne Héritier</div>
+                            <div class="paper-links">
+                                <a href="assets/papers/ffavod.pdf" target="_blank">pdf</a> / <a href="https://arxiv.org/abs/2109.07298" target="_blank">arxiv</a> / <a href="https://doi.org/10.1016/j.patrec.2021.09.002" target="_blank">doi</a> / <a href="https://github.com/hu64/FFAVOD" target="_blank">code</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="company"> Genetec </div>
-
-                    <div class="mt-3 job-header">
-                        <div class="job-title">C++ programmer/Technical Support</div>
-                        <div class="duration">October 2014 - June 2015</div>
+                    <div class="selected-paper row g-3 align-items-center mt-1">
+                        <div class="col-4 col-sm-3">
+                            <img src="assets/images/papers/spotnet.webp" class="img-fluid rounded selected-thumb" alt="SpotNet attention map highlighting vehicles at a night-time intersection"
+                                width="400" height="212" loading="lazy" />
+                        </div>
+                        <div class="col-8 col-sm-9">
+                            <span class="badge venue-badge">CRV 2020</span>
+                            <div class="publication-title">SpotNet: Self-Attention Multi-Task Network for Object Detection</div>
+                            <div class="publication-authors"><strong>Hughes Perreault</strong>, Guillaume-Alexandre Bilodeau, Nicolas Saunier, Maguelonne Héritier</div>
+                            <div class="paper-links">
+                                <a href="assets/papers/spotnet.pdf" target="_blank">pdf</a> / <a href="https://arxiv.org/abs/2002.05540" target="_blank">arxiv</a> / <a href="https://doi.org/10.1109/CRV50864.2020.00038" target="_blank">doi</a> / <a href="https://github.com/hu64/SpotNet" target="_blank">code</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="company"> Dash Computer Solutions </div>
-
-                    <div class="mt-3"> For specific references, please contact me.</div>
+                    <div class="selected-paper row g-3 align-items-center mt-1">
+                        <div class="col-4 col-sm-3">
+                            <img src="assets/images/papers/rn-vid.webp" class="img-fluid rounded selected-thumb" alt="RN-VID detections compared with the RetinaNet baseline on a traffic scene"
+                                width="400" height="399" loading="lazy" />
+                        </div>
+                        <div class="col-8 col-sm-9">
+                            <span class="badge venue-badge">ICIAR 2020</span>
+                            <span class="badge award-badge">Best Paper Award</span>
+                            <div class="publication-title">RN-VID: A Feature Fusion Architecture for Video Object Detection</div>
+                            <div class="publication-authors"><strong>Hughes Perreault</strong>, Maguelonne Heritier, Pierre Gravel, Guillaume-Alexandre Bilodeau, Nicolas Saunier</div>
+                            <div class="paper-links">
+                                <a href="assets/papers/rn-vid.pdf" target="_blank">pdf</a> / <a href="https://arxiv.org/abs/2003.10898" target="_blank">arxiv</a> / <a href="https://doi.org/10.1007/978-3-030-50347-5_12" target="_blank">doi</a> / <a href="https://github.com/hu64/RN-VID" target="_blank">code</a>
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- Publications section -->
                     <h2 class="mt-4 mt-lg-5">
                         <span>
                             <i class="bi bi-file-earmark-text-fill" style="font-size:1.2em; vertical-align:middle;"></i>
                         </span>
-                        Publications
+                        All Publications
                     </h2>
                     <h5 class="mt-3">2023</h5>
                     <ol reversed start="11">
                         <li class="item paper">A Lightweight Convolutional Neural Network for Target Detection in an Edge Environment
-                            <div class="publication-authors">Hughes Perreault, Ola Ahmad, Daniel Czuboka</div>
+                            <div class="publication-authors"><strong>Hughes Perreault</strong>, Ola Ahmad, Daniel Czuboka</div>
                             <div class="publication-conference">2023 NDIA Michigan Chapter Ground Vehicle Systems Engineering
                                 and Technology Symposium (GVSETS)</div>
                             <ul>
@@ -248,13 +329,23 @@
                                     <a href="assets/papers/threat-detection.pdf" target="_blank">pdf (preprint)</a>
                                     / <a href="https://arxiv.org/abs/2611.09756" target="_blank">arxiv</a>
                                     /
-                                    <a href="https://ndia-mich.org/images/events/gvsets/2023/papers/aair/11%2010AM%20A%20Lightweight%20Convolutional%20Neural%20Network%20for%20Target%20Detection%20iin%20an%20Edge%20Environment.pdf"
-                                        target="_blank">official link</a>
+                                    <a href="https://web.archive.org/web/20240417215904/https://ndia-mich.org/images/events/gvsets/2023/papers/aair/11%2010AM%20A%20Lightweight%20Convolutional%20Neural%20Network%20for%20Target%20Detection%20iin%20an%20Edge%20Environment.pdf"
+                                        target="_blank">official link (archived)</a>
+                                                                    / <a class="bibtex-toggle" data-bs-toggle="collapse" href="#bib-gvsets" role="button"
+                                        aria-expanded="false" aria-controls="bib-gvsets">bibtex</a>
                                 </li>
                             </ul>
+                            <pre class="collapse bibtex" id="bib-gvsets">@inproceedings{perreault2023lightweight,
+  title     = {A Lightweight Convolutional Neural Network for Target Detection in an Edge Environment},
+  author    = {Perreault, Hughes and Ahmad, Ola and Czuboka, Daniel},
+  booktitle = {2023 NDIA Michigan Chapter Ground Vehicle Systems Engineering and Technology Symposium (GVSETS)},
+  year      = {2023},
+  eprint    = {2611.09756},
+  archivePrefix = {arXiv}
+}</pre>
                         </li>
                         <li class="item paper">MobileFuse: Multimodal Image Fusion at the Edge
-                            <div class="publication-authors">Hughes Perreault, Benoit Debaque, Rares David, Marc-Antoine
+                            <div class="publication-authors"><strong>Hughes Perreault</strong>, Benoit Debaque, Rares David, Marc-Antoine
                                 Drouin, Nicolas Duclos-Hindie, Simon Roy</div>
                             <div class="publication-conference">2023 26th International Conference on Information Fusion
                                 (FUSION)</div>
@@ -266,15 +357,25 @@
                                     / <a href="https://doi.org/10.23919/FUSION52260.2023.10224104" target="_blank">doi</a>
                                     / <a href="https://ieeexplore.ieee.org/abstract/document/10224104"
                                         target="_blank">official link</a>
+                                                                    / <a class="bibtex-toggle" data-bs-toggle="collapse" href="#bib-mobilefuse" role="button"
+                                        aria-expanded="false" aria-controls="bib-mobilefuse">bibtex</a>
                                 </li>
                             </ul>
+                            <pre class="collapse bibtex" id="bib-mobilefuse">@inproceedings{perreault2023mobilefuse,
+  title     = {{MobileFuse}: Multimodal Image Fusion at the Edge},
+  author    = {Perreault, Hughes and Debaque, Benoit and David, Rares and Drouin, Marc-Antoine and Duclos-Hindi{\'e}, Nicolas and Roy, Simon},
+  booktitle = {2023 26th International Conference on Information Fusion (FUSION)},
+  pages     = {1--8},
+  year      = {2023},
+  doi       = {10.23919/FUSION52260.2023.10224104}
+}</pre>
                         </li>
                     </ol>
 
                     <h5 class="mt-3">2022</h5>
                     <ol reversed start="9">
                         <li class="item paper">Multimodal Deep Homography Estimation Using a Domain Adaptation Generative Adversarial Network
-                            <div class="publication-authors">Thomas Pouplin, Hughes Perreault, Benoit Debaque,
+                            <div class="publication-authors">Thomas Pouplin, <strong>Hughes Perreault</strong>, Benoit Debaque,
                                 Marc-Antoine Drouin, Nicolas Duclos-Hindie, Simon Roy</div>
                             <div class="publication-conference">2nd Workshop on Multimodal Big Data (MMBD 2022), 2022 IEEE
                                 International Conference on Big Data (Big Data)</div>
@@ -284,11 +385,21 @@
                                     / <a href="https://doi.org/10.1109/BigData55660.2022.10020557" target="_blank">doi</a>
                                     / <a href="https://ieeexplore.ieee.org/document/10020557" target="_blank">official
                                         link</a>
+                                                                    / <a class="bibtex-toggle" data-bs-toggle="collapse" href="#bib-mmgan" role="button"
+                                        aria-expanded="false" aria-controls="bib-mmgan">bibtex</a>
                                 </li>
                             </ul>
+                            <pre class="collapse bibtex" id="bib-mmgan">@inproceedings{pouplin2022multimodal,
+  title     = {Multimodal Deep Homography Estimation Using a Domain Adaptation Generative Adversarial Network},
+  author    = {Pouplin, Thomas and Perreault, Hughes and Debaque, Benoit and Drouin, Marc-Antoine and Duclos-Hindie, Nicolas and Roy, Simon},
+  booktitle = {2022 IEEE International Conference on Big Data (Big Data)},
+  pages     = {3635--3641},
+  year      = {2022},
+  doi       = {10.1109/BigData55660.2022.10020557}
+}</pre>
                         </li>
                         <li class="item paper">Thermal and Visible Image Registration Using Deep Homography
-                            <div class="publication-authors">Benoit Debaque, Hughes Perreault, Jean-Philippe
+                            <div class="publication-authors">Benoit Debaque, <strong>Hughes Perreault</strong>, Jean-Philippe
                                 Mercier, Marc-Antoine Drouin, Rares David, Benedicte Chatelais, Nicolas
                                 Duclos-Hindie, Simon Roy</div>
                             <div class="publication-conference">2022 25th International Conference on Information
@@ -301,25 +412,44 @@
                                     / <a href="https://doi.org/10.23919/FUSION49751.2022.9841256" target="_blank">doi</a>
                                     / <a href="https://ieeexplore.ieee.org/abstract/document/9841256"
                                         target="_blank">official link</a>
+                                                                    / <a class="bibtex-toggle" data-bs-toggle="collapse" href="#bib-thermal" role="button"
+                                        aria-expanded="false" aria-controls="bib-thermal">bibtex</a>
                                 </li>
                             </ul>
+                            <pre class="collapse bibtex" id="bib-thermal">@inproceedings{debaque2022thermal,
+  title     = {Thermal and Visible Image Registration Using Deep Homography},
+  author    = {Debaque, Benoit and Perreault, Hughes and Mercier, Jean-Philippe and Drouin, Marc-Antoine and David, Rares and Chatelais, Benedicte and Duclos-Hindie, Nicolas and Roy, Simon},
+  booktitle = {2022 25th International Conference on Information Fusion (FUSION)},
+  pages     = {1--8},
+  year      = {2022},
+  doi       = {10.23919/FUSION49751.2022.9841256}
+}</pre>
                         </li>
                     </ol>
 
                     <h5 class="mt-3">2021</h5>
                     <ol reversed start="7">
                         <li class="item paper">Détection et segmentation des usagers de la route dans des images et vidéos
-                            <div class="publication-authors">Hughes Perreault</div>
+                            <div class="publication-authors"><strong>Hughes Perreault</strong></div>
                             <div class="publication-conference">Ph.D. thesis, Polytechnique Montréal</div>
                             <ul>
                                 <li>
                                     <a href="assets/papers/these.pdf" target="_blank">pdf</a>
                                     / <a href="https://publications.polymtl.ca/9471/" target="_blank">official link</a>
+                                                                    / <a class="bibtex-toggle" data-bs-toggle="collapse" href="#bib-these" role="button"
+                                        aria-expanded="false" aria-controls="bib-these">bibtex</a>
                                 </li>
                             </ul>
+                            <pre class="collapse bibtex" id="bib-these">@phdthesis{perreault2021these,
+  title  = {D{\'e}tection et segmentation des usagers de la route dans des images et vid{\'e}os},
+  author = {Perreault, Hughes},
+  school = {Polytechnique Montr{\'e}al},
+  year   = {2021},
+  url    = {https://publications.polymtl.ca/9471/}
+}</pre>
                         </li>
                         <li class="item paper">PolyTrack: Tracking with Bounding Polygons
-                            <div class="publication-authors">Gaspar Faure, Hughes Perreault, Guillaume-Alexandre
+                            <div class="publication-authors">Gaspar Faure, <strong>Hughes Perreault</strong>, Guillaume-Alexandre
                                 Bilodeau, Nicolas Saunier</div>
                             <div class="publication-conference">Machine Learning for Autonomous Driving Workshop (ML4AD),
                                 NeurIPS 2021</div>
@@ -330,11 +460,21 @@
                                     / <a href="https://github.com/gafaua/PolyTrack" target="_blank">code</a>
                                     / <a href="https://ml4ad.github.io/files/papers2021/PolyTrack:%20Tracking%20with%20Bounding%20Polygons.pdf"
                                         target="_blank">official link</a>
+                                                                    / <a class="bibtex-toggle" data-bs-toggle="collapse" href="#bib-polytrack" role="button"
+                                        aria-expanded="false" aria-controls="bib-polytrack">bibtex</a>
                                 </li>
                             </ul>
+                            <pre class="collapse bibtex" id="bib-polytrack">@inproceedings{faure2021polytrack,
+  title     = {{PolyTrack}: Tracking with Bounding Polygons},
+  author    = {Faure, Gaspar and Perreault, Hughes and Bilodeau, Guillaume-Alexandre and Saunier, Nicolas},
+  booktitle = {Machine Learning for Autonomous Driving Workshop (ML4AD), NeurIPS},
+  year      = {2021},
+  eprint    = {2111.01606},
+  archivePrefix = {arXiv}
+}</pre>
                         </li>
                         <li class="item paper">CenterPoly: Real-time Instance Segmentation Using Bounding Polygons
-                            <div class="publication-authors">Hughes Perreault, Guillaume-Alexandre Bilodeau, Nicolas
+                            <div class="publication-authors"><strong>Hughes Perreault</strong>, Guillaume-Alexandre Bilodeau, Nicolas
                                 Saunier, Maguelonne Héritier</div>
                             <div class="publication-conference">Proceedings of the IEEE/CVF International Conference on
                                 Computer Vision Workshops (ICCVW)</div>
@@ -346,11 +486,21 @@
                                     / <a href="https://github.com/hu64/CenterPoly" target="_blank">code</a>
                                     / <a href="https://openaccess.thecvf.com/content/ICCV2021W/AVVision/html/Perreault_CenterPoly_Real-Time_Instance_Segmentation_Using_Bounding_Polygons_ICCVW_2021_paper.html"
                                         target="_blank">official link</a>
+                                                                    / <a class="bibtex-toggle" data-bs-toggle="collapse" href="#bib-centerpoly" role="button"
+                                        aria-expanded="false" aria-controls="bib-centerpoly">bibtex</a>
                                 </li>
                             </ul>
+                            <pre class="collapse bibtex" id="bib-centerpoly">@inproceedings{perreault2021centerpoly,
+  title     = {{CenterPoly}: Real-time Instance Segmentation Using Bounding Polygons},
+  author    = {Perreault, Hughes and Bilodeau, Guillaume-Alexandre and Saunier, Nicolas and H{\'e}ritier, Maguelonne},
+  booktitle = {2021 IEEE/CVF International Conference on Computer Vision Workshops (ICCVW)},
+  pages     = {2982--2991},
+  year      = {2021},
+  doi       = {10.1109/ICCVW54120.2021.00333}
+}</pre>
                         </li>
                         <li class="item paper">FFAVOD: Feature Fusion Architecture for Video Object Detection
-                            <div class="publication-authors">Hughes Perreault, Guillaume-Alexandre Bilodeau, Nicolas
+                            <div class="publication-authors"><strong>Hughes Perreault</strong>, Guillaume-Alexandre Bilodeau, Nicolas
                                 Saunier, Maguelonne Héritier</div>
                             <div class="publication-conference">Pattern Recognition Letters, vol. 151</div>
                             <ul>
@@ -361,15 +511,26 @@
                                     / <a href="https://github.com/hu64/FFAVOD" target="_blank">code</a>
                                     / <a href="https://www.sciencedirect.com/science/article/abs/pii/S016786552100307X"
                                         target="_blank">official link</a>
+                                                                    / <a class="bibtex-toggle" data-bs-toggle="collapse" href="#bib-ffavod" role="button"
+                                        aria-expanded="false" aria-controls="bib-ffavod">bibtex</a>
                                 </li>
                             </ul>
+                            <pre class="collapse bibtex" id="bib-ffavod">@article{perreault2021ffavod,
+  title   = {{FFAVOD}: Feature Fusion Architecture for Video Object Detection},
+  author  = {Perreault, Hughes and Bilodeau, Guillaume-Alexandre and Saunier, Nicolas and H{\'e}ritier, Maguelonne},
+  journal = {Pattern Recognition Letters},
+  volume  = {151},
+  pages   = {294--301},
+  year    = {2021},
+  doi     = {10.1016/j.patrec.2021.09.002}
+}</pre>
                         </li>
                     </ol>
 
                     <h5 class="mt-3">2020</h5>
                     <ol reversed start="3">
                         <li class="item paper">SpotNet: Self-Attention Multi-Task Network for Object Detection
-                            <div class="publication-authors">Hughes Perreault, Guillaume-Alexandre Bilodeau, Nicolas
+                            <div class="publication-authors"><strong>Hughes Perreault</strong>, Guillaume-Alexandre Bilodeau, Nicolas
                                 Saunier, Maguelonne Héritier</div>
                             <div class="publication-conference">17th Conference on Computer and Robot Vision (CRV)</div>
                             <ul>
@@ -380,11 +541,21 @@
                                     / <a href="https://github.com/hu64/SpotNet" target="_blank">code</a>
                                     / <a href="https://ieeexplore.ieee.org/abstract/document/9108685/"
                                         target="_blank">official link</a>
+                                                                    / <a class="bibtex-toggle" data-bs-toggle="collapse" href="#bib-spotnet" role="button"
+                                        aria-expanded="false" aria-controls="bib-spotnet">bibtex</a>
                                 </li>
                             </ul>
+                            <pre class="collapse bibtex" id="bib-spotnet">@inproceedings{perreault2020spotnet,
+  title     = {{SpotNet}: Self-Attention Multi-Task Network for Object Detection},
+  author    = {Perreault, Hughes and Bilodeau, Guillaume-Alexandre and Saunier, Nicolas and H{\'e}ritier, Maguelonne},
+  booktitle = {2020 17th Conference on Computer and Robot Vision (CRV)},
+  pages     = {230--237},
+  year      = {2020},
+  doi       = {10.1109/CRV50864.2020.00038}
+}</pre>
                         </li>
                         <li class="item paper">RN-VID: A Feature Fusion Architecture for Video Object Detection
-                            <div class="publication-authors">Hughes Perreault, Maguelonne Heritier, Pierre Gravel,
+                            <div class="publication-authors"><strong>Hughes Perreault</strong>, Maguelonne Heritier, Pierre Gravel,
                                 Guillaume-Alexandre Bilodeau, Nicolas Saunier</div>
                             <div class="publication-conference">International Conference on Image Analysis and
                                 Recognition (ICIAR 2020), LNCS</div>
@@ -398,15 +569,27 @@
                                         target="_blank">official link</a>
                                     / <a href="https://github.com/hu64/RN-VID/blob/master/imgs/iciar_award.png"
                                         target="_blank">&#11088; award &#11088;</a>
+                                                                    / <a class="bibtex-toggle" data-bs-toggle="collapse" href="#bib-rnvid" role="button"
+                                        aria-expanded="false" aria-controls="bib-rnvid">bibtex</a>
                                 </li>
                             </ul>
+                            <pre class="collapse bibtex" id="bib-rnvid">@inproceedings{perreault2020rnvid,
+  title     = {{RN-VID}: A Feature Fusion Architecture for Video Object Detection},
+  author    = {Perreault, Hughes and H{\'e}ritier, Maguelonne and Gravel, Pierre and Bilodeau, Guillaume-Alexandre and Saunier, Nicolas},
+  booktitle = {Image Analysis and Recognition (ICIAR 2020)},
+  series    = {Lecture Notes in Computer Science},
+  pages     = {125--138},
+  publisher = {Springer},
+  year      = {2020},
+  doi       = {10.1007/978-3-030-50347-5_12}
+}</pre>
                         </li>
                     </ol>
 
                     <h5 class="mt-3">2019</h5>
                     <ol start="1">
                         <li class="item paper">Road User Detection in Videos
-                            <div class="publication-authors">Hughes Perreault, Guillaume-Alexandre Bilodeau, Nicolas
+                            <div class="publication-authors"><strong>Hughes Perreault</strong>, Guillaume-Alexandre Bilodeau, Nicolas
                                 Saunier, Pierre Gravel</div>
                             <div class="publication-conference">arXiv preprint</div>
                             <ul>
@@ -414,10 +597,54 @@
                                     <a href="assets/papers/road_user.pdf" target="_blank">pdf</a>
                                     / <a href="https://arxiv.org/abs/1903.12049" target="_blank">arxiv</a>
                                     / <a href="https://github.com/hu64/RN-VID" target="_blank">code</a>
+                                                                    / <a class="bibtex-toggle" data-bs-toggle="collapse" href="#bib-roaduser" role="button"
+                                        aria-expanded="false" aria-controls="bib-roaduser">bibtex</a>
                                 </li>
                             </ul>
+                            <pre class="collapse bibtex" id="bib-roaduser">@misc{perreault2019roaduser,
+  title  = {Road User Detection in Videos},
+  author = {Perreault, Hughes and Bilodeau, Guillaume-Alexandre and Saunier, Nicolas and Gravel, Pierre},
+  year   = {2019},
+  eprint = {1903.12049},
+  archivePrefix = {arXiv}
+}</pre>
                         </li>
                     </ol>
+
+                    <!-- Awards section -->
+                    <h2 class="mt-4 mt-lg-5">
+                        <span>
+                            <i class="bi bi-trophy-fill fs-4 align-middle"></i>
+                        </span>
+                        Awards
+                    </h2>
+                    <div class="mt-3 job-header">
+                        <div class="job-title">Springer Best Paper Award (1st place)</div>
+                        <div class="duration">June 2020</div>
+                    </div>
+                    <div class="company"> ICIAR 2020, for <em>RN-VID: A Feature Fusion Architecture for Video Object
+                            Detection</em> (<a href="https://github.com/hu64/RN-VID/blob/master/imgs/iciar_award.png"
+                            target="_blank">certificate</a>) </div>
+
+                    <!-- Teaching section -->
+                    <h2 class="mt-4 mt-lg-5">
+                        <span>
+                            <i class="bi bi-mortarboard-fill fs-4 align-middle"></i>
+                        </span>
+                        Teaching
+                    </h2>
+                    <div class="mt-3 job-header">
+                        <div class="job-title">Lecturer for the INF1005C course</div>
+                        <div class="duration">Trimester F19</div>
+                    </div>
+                    <div class="company"> Polytechnique Montréal </div>
+
+                    <div class="mt-3 job-header">
+                        <div class="job-title">TA for the INF8770 course</div>
+                        <div class="duration">Trimesters F17, W18, F18, W19, F20, W21</div>
+                    </div>
+                    <div class="company"> Polytechnique Montréal
+                    </div>
 
                 </div>
             </div>
