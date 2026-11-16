@@ -20,6 +20,20 @@
     <meta name="twitter:title" content="Hughes Perreault — AI Researcher">
     <meta name="twitter:description" content="AI researcher at the Institut de recherche d'Hydro-Québec (IREQ), with a background in computer vision, object detection, and multimodal image fusion.">
     <meta name="twitter:image" content="https://www.hughesperreault.com/assets/images/profile.jpg">
+    <script>
+        /* Apply the saved or system colour theme before first paint. */
+        (function () {
+            var t = null;
+            try { t = localStorage.getItem('theme'); } catch (e) {}
+            if (t !== 'light' && t !== 'dark') {
+                t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+            document.documentElement.setAttribute('data-bs-theme', t);
+        })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -60,13 +74,13 @@
     </script>
 </head>
 
-<body class="bg-secondary">
+<body>
 
-    <div class="container-fluid container-lg px-0 px-sm-2 px-lg-3">
-        <section class="page-card text-start my-3 my-lg-5 mx-0 mx-lg-5 bg-light text-dark shadow p-3 p-md-4 p-lg-5 rounded">
-            <!-- Post -->
-            <div class="row mt-0 mt-lg-5 mb-0 mb-lg-5 mx-0 mx-lg-5">
-                <div class="col-lg-4 mb-4 text-center text-lg-start">
+    <main class="container site">
+        <section>
+            <div class="layout">
+                <div class="layout-side text-center text-lg-start">
+                  <div class="sidebar">
 
                     <div class="profile-img mx-auto">
                         <img src="assets/images/profile.jpg" class="img-fluid rounded-circle" alt="Hughes Perreault"
@@ -74,35 +88,35 @@
                     </div>
 
 
-                    <div class="container mt-4 mt-lg-5 px-0 px-lg-5">
+                    <div class="mt-4">
 
                         <div>
                             <h3>Contacts</h3>
                             Best reached via <a href="https://linkedin.com/in/hughes-perreault" target="_blank" rel="me noopener">LinkedIn</a>.
                             <div class="social-links d-flex flex-wrap justify-content-center justify-content-lg-start align-items-center gap-2 mt-2">
                                 <a href="https://orcid.org/0000-0001-8612-3180" target="_blank" rel="me noopener" aria-label="ORCID">
-                                    <i class="ai ai-orcid ai-2x"></i>
+                                    <i class="ai ai-orcid"></i>
                                 </a>
                                 <a href="https://scholar.google.com/citations?user=gztzCKkAAAAJ" target="_blank" rel="me noopener" aria-label="Google Scholar">
-                                    <i class="ai ai-google-scholar ai-2x"></i>
+                                    <i class="ai ai-google-scholar"></i>
                                 </a>
                                 <a href="https://www.semanticscholar.org/author/Hughes-Perreault/90852178" target="_blank" rel="me noopener" aria-label="Semantic Scholar">
-                                    <i class="ai ai-semantic-scholar ai-2x"></i>
+                                    <i class="ai ai-semantic-scholar"></i>
                                 </a>
                                 <a href="https://openalex.org/A5051063558" target="_blank" rel="me noopener" aria-label="OpenAlex" title="OpenAlex">
-                                    <i class="bi bi-database-fill fs-3"></i>
+                                    <i class="bi bi-database-fill"></i>
                                 </a>
                                 <a href="https://www.webofscience.com/wos/author/rid/AAW-2306-2020" target="_blank" rel="me noopener" aria-label="Web of Science (ResearcherID AAW-2306-2020)">
-                                    <i class="ai ai-clarivate ai-2x"></i>
+                                    <i class="ai ai-clarivate"></i>
                                 </a>
                                 <a href="https://www.researchgate.net/profile/Hughes-Perreault" target="_blank" rel="me noopener" aria-label="ResearchGate">
-                                    <i class="ai ai-researchgate ai-2x"></i>
+                                    <i class="ai ai-researchgate"></i>
                                 </a>
                                 <a href="https://github.com/hu64" target="_blank" aria-label="GitHub">
-                                    <i class="bi bi-github fs-3"></i>
+                                    <i class="bi bi-github"></i>
                                 </a>
                                 <a href="https://linkedin.com/in/hughes-perreault" target="_blank" rel="me noopener" aria-label="LinkedIn">
-                                    <i class="bi bi-linkedin fs-3"></i>
+                                    <i class="bi bi-linkedin"></i>
                                 </a>
                             </div>
                         </div>
@@ -124,39 +138,25 @@
                             Université de Montréal (2011-2015)
 
                         </div>
-
-                        <div class="mt-4 mt-lg-5">
-                            <h3 class="mb-3">Interests</h3>
-                            <img class="icon" src="assets/images/chess-svgrepo-com.svg" alt="Chess" loading="lazy" style="height:2em; vertical-align:middle;" />
-                            <img class="icon" src="assets/images/family.png" alt="Family" loading="lazy" />
-                            <img class="icon" style="margin-bottom: 15px;" src="assets/images/juggler.png" alt="Juggling" loading="lazy" />
-                            <img class="icon" style="margin-bottom: 15px;" src="assets/images/unicycle.png" alt="Unicycle" loading="lazy" />
-                            <i class="bi bi-tree-fill fs-2"></i>
-
-                            <br>
-
-                            <div class="small">
-                                The code for this site can be found <a
-                                    href="https://github.com/hu64/hughesperreault.com" target="_blank">here</a>.
-                                <br>Last updated: November 2026.
-                            </div>
-                        </div>
                     </div>
+                  </div>
                 </div>
 
-                <div class="col-lg-8 mb-4">
-                    <div class="lang-switch text-end small mb-2">
+                <header class="layout-head">
+                    <div class="top-links">
                         <a href="fr/" hreflang="fr" lang="fr">Français</a>
+                        <button type="button" class="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">
+                            <i class="bi bi-moon-stars"></i>
+                        </button>
                     </div>
-                    <h1>Hughes Perreault - AI researcher</h1>
+                    <h1 class="site-name">Hughes Perreault</h1>
+                    <p class="site-role">AI Researcher · Institut de recherche d'Hydro-Québec (IREQ)</p>
+                </header>
+
+                <div class="layout-main">
 
                     <!-- About section -->
-                    <h2 class="mt-4 mt-lg-5">
-                        <span>
-                            <i class="bi bi-person-fill" style="font-size:1.2em; vertical-align:middle;"></i>
-                        </span>
-                        About
-                    </h2>
+                    <h2 class="section-title">About</h2>
                     <p>
                         I am an AI researcher at the Institut de recherche d'Hydro-Québec (IREQ), where I work on
                         machine learning for the energy sector. My research centers on computer vision and efficient
@@ -176,12 +176,7 @@
                     </p>
 
                     <!-- Research interests section -->
-                    <h2 class="mt-4 mt-lg-5">
-                        <span>
-                            <i class="bi bi-lightbulb-fill fs-4 align-middle"></i>
-                        </span>
-                        Research Interests
-                    </h2>
+                    <h2 class="section-title">Research Interests</h2>
                     <ul class="research-interests">
                         <li>Computer vision: object detection, instance segmentation and tracking</li>
                         <li>Multimodal image fusion and registration (thermal and visible)</li>
@@ -190,12 +185,7 @@
                     </ul>
 
                     <!-- News section -->
-                    <h2 class="mt-4 mt-lg-5">
-                        <span>
-                            <i class="bi bi-megaphone-fill fs-4 align-middle"></i>
-                        </span>
-                        News
-                    </h2>
+                    <h2 class="section-title">News</h2>
                     <ul class="news list-unstyled">
                         <li><span class="news-date">Jan 2026</span> <span>Joined the Institut de recherche d'Hydro-Québec
                             (IREQ) as an AI Researcher.</span></li>
@@ -206,13 +196,7 @@
                         <li><span class="news-date">Oct 2021</span> <span>Joined Thales as an AI Scientist.</span></li>
                     </ul>
 
-                    <h2 class="mt-4 mt-lg-5">
-
-                        <span>
-                            <i class="bi bi-briefcase-fill fs-4 align-middle"></i>
-                        </span>
-                        Positions
-                    </h2>
+                    <h2 class="section-title">Positions</h2>
                     <div class="mt-3 job-header">
                         <div class="job-title">AI Researcher</div>
                         <div class="duration">January 2026 - Present</div>
@@ -233,12 +217,7 @@
 
 
                     <!-- Selected publications section -->
-                    <h2 class="mt-4 mt-lg-5">
-                        <span>
-                            <i class="bi bi-star-fill fs-4 align-middle"></i>
-                        </span>
-                        Selected Publications
-                    </h2>
+                    <h2 class="section-title">Selected Publications</h2>
                     <div class="selected-paper row g-3 align-items-center mt-1">
                         <div class="col-4 col-sm-3">
                             <img src="assets/images/papers/mobilefuse.webp" class="img-fluid rounded selected-thumb" alt="Architecture overview of MobileFuse, fusing infrared and visible images"
@@ -249,7 +228,8 @@
                             <div class="publication-title">MobileFuse: Multimodal Image Fusion at the Edge</div>
                             <div class="publication-authors"><strong>Hughes Perreault</strong>, Benoit Debaque, Rares David, Marc-Antoine Drouin, Nicolas Duclos-Hindie, Simon Roy</div>
                             <div class="paper-links">
-                                <a href="assets/papers/mobilefuse.pdf" target="_blank">pdf</a> / <a href="https://doi.org/10.23919/FUSION52260.2023.10224104" target="_blank">doi</a>
+                                <a href="assets/papers/mobilefuse.pdf" target="_blank">pdf</a>
+                                <a href="https://doi.org/10.23919/FUSION52260.2023.10224104" target="_blank">doi</a>
                             </div>
                         </div>
                     </div>
@@ -263,7 +243,10 @@
                             <div class="publication-title">CenterPoly: Real-time Instance Segmentation Using Bounding Polygons</div>
                             <div class="publication-authors"><strong>Hughes Perreault</strong>, Guillaume-Alexandre Bilodeau, Nicolas Saunier, Maguelonne Héritier</div>
                             <div class="paper-links">
-                                <a href="assets/papers/centerpoly.pdf" target="_blank">pdf</a> / <a href="https://arxiv.org/abs/2108.08923" target="_blank">arxiv</a> / <a href="https://doi.org/10.1109/ICCVW54120.2021.00333" target="_blank">doi</a> / <a href="https://github.com/hu64/CenterPoly" target="_blank">code</a>
+                                <a href="assets/papers/centerpoly.pdf" target="_blank">pdf</a>
+                                <a href="https://arxiv.org/abs/2108.08923" target="_blank">arxiv</a>
+                                <a href="https://doi.org/10.1109/ICCVW54120.2021.00333" target="_blank">doi</a>
+                                <a href="https://github.com/hu64/CenterPoly" target="_blank">code</a>
                             </div>
                         </div>
                     </div>
@@ -277,7 +260,10 @@
                             <div class="publication-title">FFAVOD: Feature Fusion Architecture for Video Object Detection</div>
                             <div class="publication-authors"><strong>Hughes Perreault</strong>, Guillaume-Alexandre Bilodeau, Nicolas Saunier, Maguelonne Héritier</div>
                             <div class="paper-links">
-                                <a href="assets/papers/ffavod.pdf" target="_blank">pdf</a> / <a href="https://arxiv.org/abs/2109.07298" target="_blank">arxiv</a> / <a href="https://doi.org/10.1016/j.patrec.2021.09.002" target="_blank">doi</a> / <a href="https://github.com/hu64/FFAVOD" target="_blank">code</a>
+                                <a href="assets/papers/ffavod.pdf" target="_blank">pdf</a>
+                                <a href="https://arxiv.org/abs/2109.07298" target="_blank">arxiv</a>
+                                <a href="https://doi.org/10.1016/j.patrec.2021.09.002" target="_blank">doi</a>
+                                <a href="https://github.com/hu64/FFAVOD" target="_blank">code</a>
                             </div>
                         </div>
                     </div>
@@ -291,7 +277,10 @@
                             <div class="publication-title">SpotNet: Self-Attention Multi-Task Network for Object Detection</div>
                             <div class="publication-authors"><strong>Hughes Perreault</strong>, Guillaume-Alexandre Bilodeau, Nicolas Saunier, Maguelonne Héritier</div>
                             <div class="paper-links">
-                                <a href="assets/papers/spotnet.pdf" target="_blank">pdf</a> / <a href="https://arxiv.org/abs/2002.05540" target="_blank">arxiv</a> / <a href="https://doi.org/10.1109/CRV50864.2020.00038" target="_blank">doi</a> / <a href="https://github.com/hu64/SpotNet" target="_blank">code</a>
+                                <a href="assets/papers/spotnet.pdf" target="_blank">pdf</a>
+                                <a href="https://arxiv.org/abs/2002.05540" target="_blank">arxiv</a>
+                                <a href="https://doi.org/10.1109/CRV50864.2020.00038" target="_blank">doi</a>
+                                <a href="https://github.com/hu64/SpotNet" target="_blank">code</a>
                             </div>
                         </div>
                     </div>
@@ -306,35 +295,28 @@
                             <div class="publication-title">RN-VID: A Feature Fusion Architecture for Video Object Detection</div>
                             <div class="publication-authors"><strong>Hughes Perreault</strong>, Maguelonne Heritier, Pierre Gravel, Guillaume-Alexandre Bilodeau, Nicolas Saunier</div>
                             <div class="paper-links">
-                                <a href="assets/papers/rn-vid.pdf" target="_blank">pdf</a> / <a href="https://arxiv.org/abs/2003.10898" target="_blank">arxiv</a> / <a href="https://doi.org/10.1007/978-3-030-50347-5_12" target="_blank">doi</a> / <a href="https://github.com/hu64/RN-VID" target="_blank">code</a>
+                                <a href="assets/papers/rn-vid.pdf" target="_blank">pdf</a>
+                                <a href="https://arxiv.org/abs/2003.10898" target="_blank">arxiv</a>
+                                <a href="https://doi.org/10.1007/978-3-030-50347-5_12" target="_blank">doi</a>
+                                <a href="https://github.com/hu64/RN-VID" target="_blank">code</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Publications section -->
-                    <h2 class="mt-4 mt-lg-5">
-                        <span>
-                            <i class="bi bi-file-earmark-text-fill" style="font-size:1.2em; vertical-align:middle;"></i>
-                        </span>
-                        All Publications
-                    </h2>
+                    <h2 class="section-title">All Publications</h2>
                     <h5 class="mt-3">2023</h5>
                     <ol reversed start="11">
                         <li class="item paper">A Lightweight Convolutional Neural Network for Target Detection in an Edge Environment
                             <div class="publication-authors"><strong>Hughes Perreault</strong>, Ola Ahmad, Daniel Czuboka</div>
                             <div class="publication-conference">2023 NDIA Michigan Chapter Ground Vehicle Systems Engineering
                                 and Technology Symposium (GVSETS)</div>
-                            <ul>
-                                <li>
-                                    <a href="assets/papers/threat-detection.pdf" target="_blank">pdf (preprint)</a>
-                                    / <a href="https://arxiv.org/abs/2611.09756" target="_blank">arxiv</a>
-                                    /
-                                    <a href="https://web.archive.org/web/20240417215904/https://ndia-mich.org/images/events/gvsets/2023/papers/aair/11%2010AM%20A%20Lightweight%20Convolutional%20Neural%20Network%20for%20Target%20Detection%20iin%20an%20Edge%20Environment.pdf"
-                                        target="_blank">official link (archived)</a>
-                                                                    / <a class="bibtex-toggle" data-bs-toggle="collapse" href="#bib-gvsets" role="button"
-                                        aria-expanded="false" aria-controls="bib-gvsets">bibtex</a>
-                                </li>
-                            </ul>
+                            <div class="paper-links">
+                                <a href="assets/papers/threat-detection.pdf" target="_blank">pdf (preprint)</a>
+                                <a href="https://arxiv.org/abs/2611.09756" target="_blank">arxiv</a>
+                                <a href="https://web.archive.org/web/20240417215904/https://ndia-mich.org/images/events/gvsets/2023/papers/aair/11%2010AM%20A%20Lightweight%20Convolutional%20Neural%20Network%20for%20Target%20Detection%20iin%20an%20Edge%20Environment.pdf" target="_blank">official link (archived)</a>
+                                <a class="bibtex-toggle" data-bs-toggle="collapse" href="#bib-gvsets" role="button" aria-expanded="false" aria-controls="bib-gvsets">bibtex</a>
+                            </div>
                             <pre class="collapse bibtex" id="bib-gvsets">@inproceedings{perreault2023lightweight,
   title     = {A Lightweight Convolutional Neural Network for Target Detection in an Edge Environment},
   author    = {Perreault, Hughes and Ahmad, Ola and Czuboka, Daniel},
@@ -349,18 +331,13 @@
                                 Drouin, Nicolas Duclos-Hindie, Simon Roy</div>
                             <div class="publication-conference">2023 26th International Conference on Information Fusion
                                 (FUSION)</div>
-                            <ul>
-                                <li>
-                                    <a href="assets/papers/mobilefuse.pdf" target="_blank">pdf</a>
-                                    / <a href="https://easychair.org/publications/preprint/9f4s"
-                                        target="_blank">preprint</a>
-                                    / <a href="https://doi.org/10.23919/FUSION52260.2023.10224104" target="_blank">doi</a>
-                                    / <a href="https://ieeexplore.ieee.org/abstract/document/10224104"
-                                        target="_blank">official link</a>
-                                                                    / <a class="bibtex-toggle" data-bs-toggle="collapse" href="#bib-mobilefuse" role="button"
-                                        aria-expanded="false" aria-controls="bib-mobilefuse">bibtex</a>
-                                </li>
-                            </ul>
+                            <div class="paper-links">
+                                <a href="assets/papers/mobilefuse.pdf" target="_blank">pdf</a>
+                                <a href="https://easychair.org/publications/preprint/9f4s" target="_blank">preprint</a>
+                                <a href="https://doi.org/10.23919/FUSION52260.2023.10224104" target="_blank">doi</a>
+                                <a href="https://ieeexplore.ieee.org/abstract/document/10224104" target="_blank">official link</a>
+                                <a class="bibtex-toggle" data-bs-toggle="collapse" href="#bib-mobilefuse" role="button" aria-expanded="false" aria-controls="bib-mobilefuse">bibtex</a>
+                            </div>
                             <pre class="collapse bibtex" id="bib-mobilefuse">@inproceedings{perreault2023mobilefuse,
   title     = {{MobileFuse}: Multimodal Image Fusion at the Edge},
   author    = {Perreault, Hughes and Debaque, Benoit and David, Rares and Drouin, Marc-Antoine and Duclos-Hindi{\'e}, Nicolas and Roy, Simon},
@@ -379,16 +356,12 @@
                                 Marc-Antoine Drouin, Nicolas Duclos-Hindie, Simon Roy</div>
                             <div class="publication-conference">2nd Workshop on Multimodal Big Data (MMBD 2022), 2022 IEEE
                                 International Conference on Big Data (Big Data)</div>
-                            <ul>
-                                <li>
-                                    <a href="assets/papers/multimodal-homograhy-gan.pdf" target="_blank">pdf</a>
-                                    / <a href="https://doi.org/10.1109/BigData55660.2022.10020557" target="_blank">doi</a>
-                                    / <a href="https://ieeexplore.ieee.org/document/10020557" target="_blank">official
-                                        link</a>
-                                                                    / <a class="bibtex-toggle" data-bs-toggle="collapse" href="#bib-mmgan" role="button"
-                                        aria-expanded="false" aria-controls="bib-mmgan">bibtex</a>
-                                </li>
-                            </ul>
+                            <div class="paper-links">
+                                <a href="assets/papers/multimodal-homograhy-gan.pdf" target="_blank">pdf</a>
+                                <a href="https://doi.org/10.1109/BigData55660.2022.10020557" target="_blank">doi</a>
+                                <a href="https://ieeexplore.ieee.org/document/10020557" target="_blank">official link</a>
+                                <a class="bibtex-toggle" data-bs-toggle="collapse" href="#bib-mmgan" role="button" aria-expanded="false" aria-controls="bib-mmgan">bibtex</a>
+                            </div>
                             <pre class="collapse bibtex" id="bib-mmgan">@inproceedings{pouplin2022multimodal,
   title     = {Multimodal Deep Homography Estimation Using a Domain Adaptation Generative Adversarial Network},
   author    = {Pouplin, Thomas and Perreault, Hughes and Debaque, Benoit and Drouin, Marc-Antoine and Duclos-Hindie, Nicolas and Roy, Simon},
@@ -404,18 +377,13 @@
                                 Duclos-Hindie, Simon Roy</div>
                             <div class="publication-conference">2022 25th International Conference on Information
                                 Fusion (FUSION)</div>
-                            <ul>
-                                <li>
-                                    <a href="assets/papers/thermal-visible-homography.pdf" target="_blank">pdf</a>
-                                    / <a href="https://easychair.org/publications/preprint/n32K"
-                                        target="_blank">preprint</a>
-                                    / <a href="https://doi.org/10.23919/FUSION49751.2022.9841256" target="_blank">doi</a>
-                                    / <a href="https://ieeexplore.ieee.org/abstract/document/9841256"
-                                        target="_blank">official link</a>
-                                                                    / <a class="bibtex-toggle" data-bs-toggle="collapse" href="#bib-thermal" role="button"
-                                        aria-expanded="false" aria-controls="bib-thermal">bibtex</a>
-                                </li>
-                            </ul>
+                            <div class="paper-links">
+                                <a href="assets/papers/thermal-visible-homography.pdf" target="_blank">pdf</a>
+                                <a href="https://easychair.org/publications/preprint/n32K" target="_blank">preprint</a>
+                                <a href="https://doi.org/10.23919/FUSION49751.2022.9841256" target="_blank">doi</a>
+                                <a href="https://ieeexplore.ieee.org/abstract/document/9841256" target="_blank">official link</a>
+                                <a class="bibtex-toggle" data-bs-toggle="collapse" href="#bib-thermal" role="button" aria-expanded="false" aria-controls="bib-thermal">bibtex</a>
+                            </div>
                             <pre class="collapse bibtex" id="bib-thermal">@inproceedings{debaque2022thermal,
   title     = {Thermal and Visible Image Registration Using Deep Homography},
   author    = {Debaque, Benoit and Perreault, Hughes and Mercier, Jean-Philippe and Drouin, Marc-Antoine and David, Rares and Chatelais, Benedicte and Duclos-Hindie, Nicolas and Roy, Simon},
@@ -432,14 +400,11 @@
                         <li class="item paper">Détection et segmentation des usagers de la route dans des images et vidéos
                             <div class="publication-authors"><strong>Hughes Perreault</strong></div>
                             <div class="publication-conference">Ph.D. thesis, Polytechnique Montréal</div>
-                            <ul>
-                                <li>
-                                    <a href="assets/papers/these.pdf" target="_blank">pdf</a>
-                                    / <a href="https://publications.polymtl.ca/9471/" target="_blank">official link</a>
-                                                                    / <a class="bibtex-toggle" data-bs-toggle="collapse" href="#bib-these" role="button"
-                                        aria-expanded="false" aria-controls="bib-these">bibtex</a>
-                                </li>
-                            </ul>
+                            <div class="paper-links">
+                                <a href="assets/papers/these.pdf" target="_blank">pdf</a>
+                                <a href="https://publications.polymtl.ca/9471/" target="_blank">official link</a>
+                                <a class="bibtex-toggle" data-bs-toggle="collapse" href="#bib-these" role="button" aria-expanded="false" aria-controls="bib-these">bibtex</a>
+                            </div>
                             <pre class="collapse bibtex" id="bib-these">@phdthesis{perreault2021these,
   title  = {D{\'e}tection et segmentation des usagers de la route dans des images et vid{\'e}os},
   author = {Perreault, Hughes},
@@ -453,17 +418,13 @@
                                 Bilodeau, Nicolas Saunier</div>
                             <div class="publication-conference">Machine Learning for Autonomous Driving Workshop (ML4AD),
                                 NeurIPS 2021</div>
-                            <ul>
-                                <li>
-                                    <a href="assets/papers/polytrack.pdf" target="_blank">pdf</a>
-                                    / <a href="https://arxiv.org/abs/2111.01606" target="_blank">arxiv</a>
-                                    / <a href="https://github.com/gafaua/PolyTrack" target="_blank">code</a>
-                                    / <a href="https://ml4ad.github.io/files/papers2021/PolyTrack:%20Tracking%20with%20Bounding%20Polygons.pdf"
-                                        target="_blank">official link</a>
-                                                                    / <a class="bibtex-toggle" data-bs-toggle="collapse" href="#bib-polytrack" role="button"
-                                        aria-expanded="false" aria-controls="bib-polytrack">bibtex</a>
-                                </li>
-                            </ul>
+                            <div class="paper-links">
+                                <a href="assets/papers/polytrack.pdf" target="_blank">pdf</a>
+                                <a href="https://arxiv.org/abs/2111.01606" target="_blank">arxiv</a>
+                                <a href="https://github.com/gafaua/PolyTrack" target="_blank">code</a>
+                                <a href="https://ml4ad.github.io/files/papers2021/PolyTrack:%20Tracking%20with%20Bounding%20Polygons.pdf" target="_blank">official link</a>
+                                <a class="bibtex-toggle" data-bs-toggle="collapse" href="#bib-polytrack" role="button" aria-expanded="false" aria-controls="bib-polytrack">bibtex</a>
+                            </div>
                             <pre class="collapse bibtex" id="bib-polytrack">@inproceedings{faure2021polytrack,
   title     = {{PolyTrack}: Tracking with Bounding Polygons},
   author    = {Faure, Gaspar and Perreault, Hughes and Bilodeau, Guillaume-Alexandre and Saunier, Nicolas},
@@ -478,18 +439,14 @@
                                 Saunier, Maguelonne Héritier</div>
                             <div class="publication-conference">Proceedings of the IEEE/CVF International Conference on
                                 Computer Vision Workshops (ICCVW)</div>
-                            <ul>
-                                <li>
-                                    <a href="assets/papers/centerpoly.pdf" target="_blank">pdf</a>
-                                    / <a href="https://arxiv.org/abs/2108.08923" target="_blank">arxiv</a>
-                                    / <a href="https://doi.org/10.1109/ICCVW54120.2021.00333" target="_blank">doi</a>
-                                    / <a href="https://github.com/hu64/CenterPoly" target="_blank">code</a>
-                                    / <a href="https://openaccess.thecvf.com/content/ICCV2021W/AVVision/html/Perreault_CenterPoly_Real-Time_Instance_Segmentation_Using_Bounding_Polygons_ICCVW_2021_paper.html"
-                                        target="_blank">official link</a>
-                                                                    / <a class="bibtex-toggle" data-bs-toggle="collapse" href="#bib-centerpoly" role="button"
-                                        aria-expanded="false" aria-controls="bib-centerpoly">bibtex</a>
-                                </li>
-                            </ul>
+                            <div class="paper-links">
+                                <a href="assets/papers/centerpoly.pdf" target="_blank">pdf</a>
+                                <a href="https://arxiv.org/abs/2108.08923" target="_blank">arxiv</a>
+                                <a href="https://doi.org/10.1109/ICCVW54120.2021.00333" target="_blank">doi</a>
+                                <a href="https://github.com/hu64/CenterPoly" target="_blank">code</a>
+                                <a href="https://openaccess.thecvf.com/content/ICCV2021W/AVVision/html/Perreault_CenterPoly_Real-Time_Instance_Segmentation_Using_Bounding_Polygons_ICCVW_2021_paper.html" target="_blank">official link</a>
+                                <a class="bibtex-toggle" data-bs-toggle="collapse" href="#bib-centerpoly" role="button" aria-expanded="false" aria-controls="bib-centerpoly">bibtex</a>
+                            </div>
                             <pre class="collapse bibtex" id="bib-centerpoly">@inproceedings{perreault2021centerpoly,
   title     = {{CenterPoly}: Real-time Instance Segmentation Using Bounding Polygons},
   author    = {Perreault, Hughes and Bilodeau, Guillaume-Alexandre and Saunier, Nicolas and H{\'e}ritier, Maguelonne},
@@ -503,18 +460,14 @@
                             <div class="publication-authors"><strong>Hughes Perreault</strong>, Guillaume-Alexandre Bilodeau, Nicolas
                                 Saunier, Maguelonne Héritier</div>
                             <div class="publication-conference">Pattern Recognition Letters, vol. 151</div>
-                            <ul>
-                                <li>
-                                    <a href="assets/papers/ffavod.pdf" target="_blank">pdf</a>
-                                    / <a href="https://arxiv.org/abs/2109.07298" target="_blank">arxiv</a>
-                                    / <a href="https://doi.org/10.1016/j.patrec.2021.09.002" target="_blank">doi</a>
-                                    / <a href="https://github.com/hu64/FFAVOD" target="_blank">code</a>
-                                    / <a href="https://www.sciencedirect.com/science/article/abs/pii/S016786552100307X"
-                                        target="_blank">official link</a>
-                                                                    / <a class="bibtex-toggle" data-bs-toggle="collapse" href="#bib-ffavod" role="button"
-                                        aria-expanded="false" aria-controls="bib-ffavod">bibtex</a>
-                                </li>
-                            </ul>
+                            <div class="paper-links">
+                                <a href="assets/papers/ffavod.pdf" target="_blank">pdf</a>
+                                <a href="https://arxiv.org/abs/2109.07298" target="_blank">arxiv</a>
+                                <a href="https://doi.org/10.1016/j.patrec.2021.09.002" target="_blank">doi</a>
+                                <a href="https://github.com/hu64/FFAVOD" target="_blank">code</a>
+                                <a href="https://www.sciencedirect.com/science/article/abs/pii/S016786552100307X" target="_blank">official link</a>
+                                <a class="bibtex-toggle" data-bs-toggle="collapse" href="#bib-ffavod" role="button" aria-expanded="false" aria-controls="bib-ffavod">bibtex</a>
+                            </div>
                             <pre class="collapse bibtex" id="bib-ffavod">@article{perreault2021ffavod,
   title   = {{FFAVOD}: Feature Fusion Architecture for Video Object Detection},
   author  = {Perreault, Hughes and Bilodeau, Guillaume-Alexandre and Saunier, Nicolas and H{\'e}ritier, Maguelonne},
@@ -533,18 +486,14 @@
                             <div class="publication-authors"><strong>Hughes Perreault</strong>, Guillaume-Alexandre Bilodeau, Nicolas
                                 Saunier, Maguelonne Héritier</div>
                             <div class="publication-conference">17th Conference on Computer and Robot Vision (CRV)</div>
-                            <ul>
-                                <li>
-                                    <a href="assets/papers/spotnet.pdf" target="_blank">pdf</a>
-                                    / <a href="https://arxiv.org/abs/2002.05540" target="_blank">arxiv</a>
-                                    / <a href="https://doi.org/10.1109/CRV50864.2020.00038" target="_blank">doi</a>
-                                    / <a href="https://github.com/hu64/SpotNet" target="_blank">code</a>
-                                    / <a href="https://ieeexplore.ieee.org/abstract/document/9108685/"
-                                        target="_blank">official link</a>
-                                                                    / <a class="bibtex-toggle" data-bs-toggle="collapse" href="#bib-spotnet" role="button"
-                                        aria-expanded="false" aria-controls="bib-spotnet">bibtex</a>
-                                </li>
-                            </ul>
+                            <div class="paper-links">
+                                <a href="assets/papers/spotnet.pdf" target="_blank">pdf</a>
+                                <a href="https://arxiv.org/abs/2002.05540" target="_blank">arxiv</a>
+                                <a href="https://doi.org/10.1109/CRV50864.2020.00038" target="_blank">doi</a>
+                                <a href="https://github.com/hu64/SpotNet" target="_blank">code</a>
+                                <a href="https://ieeexplore.ieee.org/abstract/document/9108685/" target="_blank">official link</a>
+                                <a class="bibtex-toggle" data-bs-toggle="collapse" href="#bib-spotnet" role="button" aria-expanded="false" aria-controls="bib-spotnet">bibtex</a>
+                            </div>
                             <pre class="collapse bibtex" id="bib-spotnet">@inproceedings{perreault2020spotnet,
   title     = {{SpotNet}: Self-Attention Multi-Task Network for Object Detection},
   author    = {Perreault, Hughes and Bilodeau, Guillaume-Alexandre and Saunier, Nicolas and H{\'e}ritier, Maguelonne},
@@ -559,20 +508,15 @@
                                 Guillaume-Alexandre Bilodeau, Nicolas Saunier</div>
                             <div class="publication-conference">International Conference on Image Analysis and
                                 Recognition (ICIAR 2020), LNCS</div>
-                            <ul>
-                                <li>
-                                    <a href="assets/papers/rn-vid.pdf" target="_blank">pdf</a>
-                                    / <a href="https://arxiv.org/abs/2003.10898" target="_blank">arxiv</a>
-                                    / <a href="https://doi.org/10.1007/978-3-030-50347-5_12" target="_blank">doi</a>
-                                    / <a href="https://github.com/hu64/RN-VID" target="_blank">code</a>
-                                    / <a href="https://link.springer.com/chapter/10.1007/978-3-030-50347-5_12"
-                                        target="_blank">official link</a>
-                                    / <a href="https://github.com/hu64/RN-VID/blob/master/imgs/iciar_award.png"
-                                        target="_blank">&#11088; award &#11088;</a>
-                                                                    / <a class="bibtex-toggle" data-bs-toggle="collapse" href="#bib-rnvid" role="button"
-                                        aria-expanded="false" aria-controls="bib-rnvid">bibtex</a>
-                                </li>
-                            </ul>
+                            <div class="paper-links">
+                                <a href="assets/papers/rn-vid.pdf" target="_blank">pdf</a>
+                                <a href="https://arxiv.org/abs/2003.10898" target="_blank">arxiv</a>
+                                <a href="https://doi.org/10.1007/978-3-030-50347-5_12" target="_blank">doi</a>
+                                <a href="https://github.com/hu64/RN-VID" target="_blank">code</a>
+                                <a href="https://link.springer.com/chapter/10.1007/978-3-030-50347-5_12" target="_blank">official link</a>
+                                <a href="https://github.com/hu64/RN-VID/blob/master/imgs/iciar_award.png" target="_blank">&#11088; award &#11088;</a>
+                                <a class="bibtex-toggle" data-bs-toggle="collapse" href="#bib-rnvid" role="button" aria-expanded="false" aria-controls="bib-rnvid">bibtex</a>
+                            </div>
                             <pre class="collapse bibtex" id="bib-rnvid">@inproceedings{perreault2020rnvid,
   title     = {{RN-VID}: A Feature Fusion Architecture for Video Object Detection},
   author    = {Perreault, Hughes and H{\'e}ritier, Maguelonne and Gravel, Pierre and Bilodeau, Guillaume-Alexandre and Saunier, Nicolas},
@@ -592,15 +536,12 @@
                             <div class="publication-authors"><strong>Hughes Perreault</strong>, Guillaume-Alexandre Bilodeau, Nicolas
                                 Saunier, Pierre Gravel</div>
                             <div class="publication-conference">arXiv preprint</div>
-                            <ul>
-                                <li>
-                                    <a href="assets/papers/road_user.pdf" target="_blank">pdf</a>
-                                    / <a href="https://arxiv.org/abs/1903.12049" target="_blank">arxiv</a>
-                                    / <a href="https://github.com/hu64/RN-VID" target="_blank">code</a>
-                                                                    / <a class="bibtex-toggle" data-bs-toggle="collapse" href="#bib-roaduser" role="button"
-                                        aria-expanded="false" aria-controls="bib-roaduser">bibtex</a>
-                                </li>
-                            </ul>
+                            <div class="paper-links">
+                                <a href="assets/papers/road_user.pdf" target="_blank">pdf</a>
+                                <a href="https://arxiv.org/abs/1903.12049" target="_blank">arxiv</a>
+                                <a href="https://github.com/hu64/RN-VID" target="_blank">code</a>
+                                <a class="bibtex-toggle" data-bs-toggle="collapse" href="#bib-roaduser" role="button" aria-expanded="false" aria-controls="bib-roaduser">bibtex</a>
+                            </div>
                             <pre class="collapse bibtex" id="bib-roaduser">@misc{perreault2019roaduser,
   title  = {Road User Detection in Videos},
   author = {Perreault, Hughes and Bilodeau, Guillaume-Alexandre and Saunier, Nicolas and Gravel, Pierre},
@@ -612,12 +553,7 @@
                     </ol>
 
                     <!-- Awards section -->
-                    <h2 class="mt-4 mt-lg-5">
-                        <span>
-                            <i class="bi bi-trophy-fill fs-4 align-middle"></i>
-                        </span>
-                        Awards
-                    </h2>
+                    <h2 class="section-title">Awards</h2>
                     <div class="mt-3 job-header">
                         <div class="job-title">Springer Best Paper Award (1st place)</div>
                         <div class="duration">June 2020</div>
@@ -627,12 +563,7 @@
                             target="_blank">certificate</a>) </div>
 
                     <!-- Teaching section -->
-                    <h2 class="mt-4 mt-lg-5">
-                        <span>
-                            <i class="bi bi-mortarboard-fill fs-4 align-middle"></i>
-                        </span>
-                        Teaching
-                    </h2>
+                    <h2 class="section-title">Teaching</h2>
                     <div class="mt-3 job-header">
                         <div class="job-title">Lecturer for the INF1005C course</div>
                         <div class="duration">Trimester F19</div>
@@ -649,11 +580,38 @@
                 </div>
             </div>
         </section>
-    </div>
+        <footer class="site-footer">
+            The code for this site is on <a href="https://github.com/hu64/hughesperreault.com" target="_blank">GitHub</a>. Last updated: November 2026.
+        </footer>
+    </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <script>
+        /* Dark mode toggle: follows the system setting until the visitor picks one. */
+        (function () {
+            var root = document.documentElement;
+            var btn = document.querySelector('.theme-toggle');
+            function saved() {
+                try { return localStorage.getItem('theme'); } catch (e) { return null; }
+            }
+            function apply(t) {
+                root.setAttribute('data-bs-theme', t);
+                btn.querySelector('i').className = t === 'dark' ? 'bi bi-sun' : 'bi bi-moon-stars';
+                btn.setAttribute('aria-pressed', t === 'dark' ? 'true' : 'false');
+            }
+            apply(root.getAttribute('data-bs-theme'));
+            btn.addEventListener('click', function () {
+                var t = root.getAttribute('data-bs-theme') === 'dark' ? 'light' : 'dark';
+                try { localStorage.setItem('theme', t); } catch (e) {}
+                apply(t);
+            });
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
+                if (!saved()) apply(e.matches ? 'dark' : 'light');
+            });
+        })();
+    </script>
 
 </body>
 

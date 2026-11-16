@@ -1,9 +1,202 @@
-.company {
-  color: #97aac3;
+/* ---------- Theme ---------- */
+
+/* Colours live in variables so dark mode only has to redefine them.
+   Bootstrap's own variables are overridden here because this file
+   loads after bootstrap.min.css. */
+:root,
+[data-bs-theme="light"] {
+  --site-text: #23272f;
+  --site-heading: #14171c;
+  --site-muted: #5b6b7f;
+  --site-rule: #e3e7ec;
+  --site-rule-strong: #c9d1db;
+  --site-soft-bg: #f1f3f6;
+  --site-badge-bg: #3f4650;
+  --site-award-bg: #9a6a00;
+
+  --bs-body-bg: #ffffff;
+  --bs-body-color: var(--site-text);
+  --bs-link-color: #1d5fa8;
+  --bs-link-color-rgb: 29, 95, 168;
+  --bs-link-hover-color: #154a85;
+  --bs-link-hover-color-rgb: 21, 74, 133;
 }
 
+[data-bs-theme="dark"] {
+  --site-text: #dde2e8;
+  --site-heading: #f3f5f8;
+  --site-muted: #9aa8b8;
+  --site-rule: #2a313a;
+  --site-rule-strong: #3b4552;
+  --site-soft-bg: #1b2027;
+  --site-badge-bg: #4a5563;
+  --site-award-bg: #8a6400;
+
+  --bs-body-bg: #12161b;
+  --bs-body-color: var(--site-text);
+  --bs-link-color: #7ab0f0;
+  --bs-link-color-rgb: 122, 176, 240;
+  --bs-link-hover-color: #a3c8f5;
+  --bs-link-hover-color-rgb: 163, 200, 245;
+}
+
+:root {
+  --bs-body-font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --site-heading-font: "Source Serif 4", Georgia, "Times New Roman", serif;
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h5 {
+  color: var(--site-heading);
+}
+
+/* ---------- Layout ---------- */
+
+.site {
+  max-width: 1100px;
+  padding-top: 2.5rem;
+}
+
+/* Phones read name, then photo and links, then content.
+   Desktop puts the photo and links in a left column beside both. */
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas:
+    "head"
+    "side"
+    "main";
+  row-gap: 1.5rem;
+}
+
+.layout-head { grid-area: head; }
+.layout-side { grid-area: side; }
+.layout-main { grid-area: main; }
+
+@media (min-width: 992px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    grid-template-areas:
+      "side head"
+      "side main";
+    grid-template-rows: auto 1fr;
+    column-gap: 3rem;
+    row-gap: 0;
+  }
+}
+
+/* On a tall enough desktop screen, keep the photo and contact links in
+   view while the publication list scrolls. */
+@media (min-width: 992px) and (min-height: 760px) {
+  .sidebar {
+    position: sticky;
+    top: 2.5rem;
+  }
+}
+
+.site-footer {
+  border-top: 1px solid var(--site-rule);
+  color: var(--site-muted);
+  font-size: 0.85rem;
+  margin-top: 2rem;
+  padding: 1.25rem 0 2rem;
+}
+
+/* ---------- Header ---------- */
+
+.top-links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--site-rule-strong);
+  border-radius: 6px;
+  color: var(--site-text);
+  line-height: 1;
+  padding: 5px 8px;
+}
+
+.theme-toggle:hover {
+  background-color: var(--site-soft-bg);
+}
+
+.site-name {
+  font-family: var(--site-heading-font);
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.site-role {
+  color: var(--site-muted);
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+
+.section-title {
+  font-family: var(--site-heading-font);
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--site-rule);
+}
+
+/* ---------- Sidebar ---------- */
+
+.profile-img {
+  max-width: 240px;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .profile-img {
+    margin-left: 0 !important;
+  }
+}
+
+.sidebar h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Social icons: one size, finger-sized hit areas. */
+.social-links {
+  gap: 2px !important;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  min-height: 40px;
+  /* Icons are not text: Bootstrap's link underline only draws stray dashes. */
+  text-decoration: none;
+}
+
+.social-links i {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+/* ---------- Positions, teaching, awards ---------- */
+
+.company,
 .duration {
-  color: #97aac3;
+  color: var(--site-muted);
 }
 
 /* Job title and duration sit side by side when there is room, and stack
@@ -16,60 +209,15 @@
   gap: 0 1rem;
 }
 
+.job-title {
+  font-weight: 500;
+}
+
 .job-header .duration {
   font-size: 0.9rem;
 }
 
-.publication-title {
-  font-size: 16px;
-  font-weight: 400;
-  color: #3f4650;
-  margin-bottom: 1px;
-}
-
-.publication-authors {
-  font-style: italic;
-  color: #97aac3;
-  margin-bottom: 1px;
-  font-size: 14px;
-}
-
-.publication-conference {
-  color: #3f4650;
-  margin-bottom: 1px;
-  font-size: 15px;
-}
-
-.paper {
-  margin-top: 10px;
-}
-
-.profile-img {
-  max-width: 350px;
-  width: 100%;
-}
-
-.icon {
-  max-width: 40px;
-  margin-bottom: 10px;
-}
-
-/* Links in publication lists are tap targets, not just text. */
-.paper a {
-  display: inline-block;
-  padding: 2px 0;
-}
-
-/* Social icons need finger-sized hit areas. */
-.social-links a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 44px;
-  min-height: 44px;
-  /* Icons are not text: Bootstrap's link underline only draws stray dashes. */
-  text-decoration: none;
-}
+/* ---------- Research interests and news ---------- */
 
 .research-interests li {
   margin-bottom: 2px;
@@ -84,9 +232,58 @@
 
 .news-date {
   flex: 0 0 4.5rem;
-  color: #97aac3;
+  color: var(--site-muted);
   font-size: 0.9rem;
   padding-top: 2px;
+}
+
+/* ---------- Publications ---------- */
+
+.publication-title {
+  font-weight: 500;
+  margin-bottom: 1px;
+}
+
+.publication-authors {
+  font-style: italic;
+  color: var(--site-muted);
+  margin-bottom: 1px;
+  font-size: 14px;
+}
+
+.publication-authors strong {
+  color: var(--site-text);
+}
+
+.publication-conference {
+  margin-bottom: 1px;
+  font-size: 15px;
+}
+
+.paper {
+  margin-top: 12px;
+}
+
+/* Paper links as small outlined buttons instead of "pdf / arxiv / ...". */
+.paper-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 6px;
+  margin-top: 5px;
+}
+
+.paper-links a {
+  font-size: 12.5px;
+  line-height: 1.5;
+  padding: 1px 9px;
+  border: 1px solid var(--site-rule-strong);
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.paper-links a:hover,
+.paper-links a[aria-expanded="true"] {
+  background-color: var(--site-soft-bg);
 }
 
 .selected-paper {
@@ -97,26 +294,23 @@
   width: 100%;
   aspect-ratio: 16 / 10;
   object-fit: cover;
-  border: 1px solid #dee2e6;
+  border: 1px solid var(--site-rule);
 }
 
 .venue-badge {
-  background-color: #3f4650;
+  background-color: var(--site-badge-bg);
   font-weight: 500;
 }
 
 .award-badge {
-  background-color: #b8860b;
+  background-color: var(--site-award-bg);
   font-weight: 500;
-}
-
-.paper-links {
-  font-size: 15px;
 }
 
 .bibtex {
   font-size: 12px;
-  background-color: #eef1f5;
+  color: var(--site-text);
+  background-color: var(--site-soft-bg);
   border-radius: 4px;
   padding: 10px 12px;
   margin: 6px 0 0;
@@ -124,16 +318,24 @@
   overflow-x: auto;
 }
 
+/* ---------- Small screens ---------- */
+
 @media (max-width: 991.98px) {
-  /* The card spans the full width on mobile, so square off the outer
-     corners and let the content breathe instead of the frame. */
-  .page-card {
-    border-radius: 0;
+  .site {
+    padding-top: 1.5rem;
   }
 
-  /* A 350px circle crowds a 375px screen; scale it to the column. */
   .profile-img {
-    max-width: 200px;
+    max-width: 180px;
+  }
+
+  .top-links {
+    justify-content: center;
+  }
+
+  .site-name,
+  .site-role {
+    text-align: center;
   }
 
   /* Stacked: the duration reads as a caption under the title. */
@@ -145,19 +347,12 @@
     font-size: 0.85rem;
   }
 
-  /* Ordered publication lists indent twice over (ol + nested ul),
-     which eats scarce horizontal space. */
   .paper {
     margin-top: 16px;
   }
 
   ol {
     padding-left: 1.25rem;
-  }
-
-  .paper ul {
-    padding-left: 1rem;
-    margin-bottom: 0;
   }
 
   /* Long author lists and conference names should wrap, never overflow. */
@@ -168,16 +363,12 @@
 }
 
 @media (max-width: 575.98px) {
-  h1 {
-    font-size: 1.6rem;
+  .site-name {
+    font-size: 2rem;
   }
 
-  h2 {
-    font-size: 1.35rem;
-  }
-
-  h3 {
-    font-size: 1.15rem;
+  .section-title {
+    font-size: 1.3rem;
   }
 
   h5 {
